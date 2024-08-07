@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+body {
+  background-color: #101112;
+  width: 100%;
+}
+.todo-container {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: black;
+  height: 672px;
+  width: 280px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.todo-section {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 42px;
+  width: 220px;
+  margin-top: 10px;
+}
+.todo-circle {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: green;
+  margin-right: 10px;
+}
+.todo-too {
+  position: absolute;
+  color: #999999;
+  right: 10px;
+}
+.DuguiContainer {
+  width: 12px;
+  height: 12px;
+  background-color: #101112;
+  border-radius: 50%;
+  margin: 20px;
+  margin: 0;
+  border: 1px solid white;
+}
+.todo-section2 {
+  color: #d9d9d9;
+  display: flex;
+  width: 230px;
+  height: 54px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 300;
+  background-color: #101010;
+  border-radius: 5px;
+}
+.zurag {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  margin-right: 20px;
+}
+.todo-app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-task button {
+  height: 44px;
+  width: 110px;
+  text-decoration: none;
+  background-color: #00a300;
+  color: white;
+  border-radius: 3px;
+  padding: 0px, 20px, 0, 20px;
+}
+.todo-app-task {
+  margin-top: 20px;
+  margin-right: 20px;
+  gap: 10px;
+  display: flex;
+  justify-content: end;
+}
+.Modal {
+  height: 376px;
+  width: 370px;
+  background-color: #1e1e1e;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+  z-index: 1;
+  position: absolute;
+}
+.modal-input {
+  color: #999999;
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  height: 43px;
+  position: absolute;
+  top: 100px;
+  gap: 10px;
+}
+.modal-text {
+  color: white;
+  font-size: 20px;
+  width: 120px;
+  font-weight: 700;
+}
+.todo-task button:hover .todo-task button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.todo-input {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid green;
+  font-size: 20px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+}
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.todo-submitbtn {
+  height: 44px;
+  margin-top: 60px;
+  width: 290px;
+  background-color: #00a300;
+  color: white;
+  border-radius: 5px;
+}
+#todoCircle2 {
+  background-color: orange;
+}
+#todoCircle {
+  background-color: white;
+}
+#todoCircle4 {
+  background-color: red;
+}
