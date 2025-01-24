@@ -7,92 +7,36 @@
     <link rel="stylesheet" href="./todo.css" />
   </head>
   <body>
-    <div class="todo-app-task">
-      <div class="todo-task" id="MyBtn">
-        <button type="button">Add task</button>
-      </div>
-    </div>
     <div class="todo-app">
-      <div class="todo-container">
-        <div class="todo-section">
-          <p class="todo-circle" id="todoCircle"></p>
-          <p class="todo-word">To Do</p>
-          <p class="todo-too">5</p>
-        </div>
-        <div class="todo-section2">
-          <div id="DuguiContainer"></div>
-          <div class="todo-comp">
-            <p id="sectionSelected">[Loan-managament] - Add</p>
-            <p>Card component</p>
-          </div>
-          <div class="zurag">
-            <img src="./Vector (1).png" />
-            <img src="./Frame.png" />
-          </div>
-        </div>
-
-        <div id="todoContainer"></div>
-      </div>
-
-      <div class="todo-container" id="todoContainer2">
-        <div class="todo-section">
-          <p class="todo-circle" id="todoCircle2"></p>
-          <p class="todo-word">In progress</p>
-          <p class="todo-too">5</p>
-        </div>
-        <div class="todo-section2" id="todoProgress">
-          <div id="DuguiContainer"></div>
-          <div class="todo-comp">
-            <p>[Loan-managament] - Add</p>
-            <p>Card component</p>
-          </div>
-          <div class="zurag">
-            <img src="./Vector (1).png" />
-            <img src="./Frame.png" />
-          </div>
+      <div class="todo-app-task">
+        <div class="todo-task" id="MyBtn">
+          <button type="button">Add task</button>
         </div>
       </div>
-      <div class="todo-container" id="todoContainer3">
-        <div class="todo-section">
-          <p class="todo-circle" id="todoCircle3"></p>
-          <p class="todo-word">Done</p>
-          <p class="todo-too">5</p>
+      <div id="container">
+        <div class="todo-column" style="border-top: 5px solid #f39c12">
+          <h2 style="color: #f39c12">To Do</h2>
+          <div id="todoContainer"></div>
         </div>
-        <div class="todo-section2">
-          <div id="Dugui3Container"></div>
-          <div class="todo-comp">
-            <p>[Loan-managament] - Add</p>
-            <p>Card component</p>
-          </div>
-          <div class="zurag">
-            <img src="./Vector (1).png" />
-            <img src="./Frame.png" />
-          </div>
+        <div class="todo-column" style="border-top: 5px solid #3498db">
+          <h2 style="color: #3498db">In Progress</h2>
+          <div id="todoProgress"></div>
         </div>
-      </div>
-      <div class="todo-container" id="blockContainer">
-        <div class="todo-section">
-          <p class="todo-circle" id="todoCircle4"></p>
-          <p class="todo-word">Blocked</p>
-          <p class="todo-too">5</p>
+        <div class="todo-column" style="border-top: 5px solid #2ecc71">
+          <h2 style="color: #2ecc71">Done</h2>
+          <div id="todoContainer3"></div>
         </div>
-        <div class="todo-section2">
-          <div id="Dugui4Container"></div>
-          <div class="todo-comp">
-            <p>[Loan-managament] - Add</p>
-            <p>Card component</p>
-          </div>
-          <div class="zurag">
-            <img src="./Vector (1).png" />
-            <img src="./Frame.png" />
-          </div>
+        <div class="todo-column" style="border-top: 5px solid #e74c3c">
+          <h2 style="color: #e74c3c">Blocked</h2>
+          <div id="blockContainer"></div>
         </div>
       </div>
       <div id="MyModal" class="Modal">
         <div class="modal-content">
+          <button id="closeModalButton" class="modal-close-btn">&times;</button>
           <div class="modal-input">
             <p id="modalText" class="modal-text">Enter task</p>
-            <label for="Taskname"> </label>
+            <label for="Taskname"></label>
             <input
               type="text"
               class="todo-input"
@@ -100,8 +44,8 @@
               placeholder="Task name"
             />
             <select id="statusSelect" class="todo-input">
-              <option value="">status</option>
-              <option value="todo">Todo</option>
+              <option value="">Status</option>
+              <option value="todo">To do</option>
               <option value="inprogress">Progress</option>
               <option value="done">Done</option>
               <option value="blocked">Blocked</option>
@@ -115,7 +59,6 @@
         </div>
       </div>
     </div>
-
     <script src="./java.js"></script>
   </body>
 </html>

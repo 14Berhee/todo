@@ -8,81 +8,16 @@ body {
   background-color: #101112;
   width: 100%;
 }
-.todo-container {
-  margin-top: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-  background-color: black;
-  height: 672px;
-  width: 280px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: start;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-.todo-section {
-  font-size: 20px;
-  font-weight: 700;
-  font-family: sans-serif;
-  background-color: black;
-  color: white;
-  display: flex;
-  align-items: center;
-  position: relative;
-  height: 42px;
-  width: 220px;
-  margin-top: 10px;
-}
-.todo-circle {
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  background-color: green;
-  margin-right: 10px;
-}
-.todo-too {
-  position: absolute;
-  color: #999999;
-  right: 10px;
-}
-.DuguiContainer {
-  width: 12px;
-  height: 12px;
-  background-color: #101112;
-  border-radius: 50%;
-  margin: 20px;
-  margin: 0;
-  border: 1px solid white;
-}
-.todo-section2 {
-  color: #d9d9d9;
-  display: flex;
-  width: 230px;
-  height: 54px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  gap: 9px;
-  font-size: 14px;
-  font-weight: 300;
-  background-color: #101010;
-  border-radius: 5px;
-}
-.zurag {
-  width: 16px;
-  height: 16px;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 8px;
-  margin-right: 20px;
-}
 .todo-app {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+}
+.todo-app-task {
+  margin-top: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: flex-end;
 }
 .todo-task button {
   height: 44px;
@@ -91,14 +26,76 @@ body {
   background-color: #00a300;
   color: white;
   border-radius: 3px;
-  padding: 0px, 20px, 0, 20px;
+  cursor: pointer;
 }
-.todo-app-task {
-  margin-top: 20px;
-  margin-right: 20px;
-  gap: 10px;
+.todo-task button:hover {
+  color: black;
+}
+#container {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.todo-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #2d2d2d;
+  border-radius: 15px;
+  padding: 15px;
+  min-height: 600px;
+  max-width: 280px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.todo-circle {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+#todoCircle {
+  background-color: white;
+}
+#todoCircle2 {
+  background-color: orange;
+}
+#todoCircle3 {
+  background-color: green;
+}
+#todoCircle4 {
+  background-color: red;
+}
+.todo-section2 {
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.todo-section2:hover {
+  background-color: #4a4a4a;
+}
+.zurag img {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
 }
 .Modal {
   height: 376px;
@@ -112,6 +109,7 @@ body {
   display: none;
   z-index: 1;
   position: absolute;
+  top: 100px;
 }
 .modal-input {
   color: #999999;
@@ -123,45 +121,30 @@ body {
   top: 100px;
   gap: 10px;
 }
-.modal-text {
-  color: white;
-  font-size: 20px;
-  width: 120px;
-  font-weight: 700;
-}
-.todo-task button:hover .todo-task button:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-.todo-input {
-  background-color: #1e1e1e;
-  color: white;
-  border: 1px solid green;
-  font-size: 20px;
-  padding: 5px 5px 5px 5px;
-  border-radius: 5px;
-}
 .modal-content {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+.modal-close-btn:hover {
+  color: red;
+}
 .todo-submitbtn {
-  height: 44px;
-  margin-top: 60px;
-  width: 290px;
+  width: 70px;
+  height: 30px;
   background-color: #00a300;
   color: white;
-  border-radius: 5px;
-}
-#todoCircle2 {
-  background-color: orange;
-}
-#todoCircle {
-  background-color: white;
-}
-#todoCircle4 {
-  background-color: red;
+  border: none;
+  border-radius: 4px;
 }
