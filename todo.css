@@ -27,9 +27,12 @@ body {
   color: white;
   border-radius: 3px;
   cursor: pointer;
+  border: none;
+  border-radius: 6px;
 }
 .todo-task button:hover {
   color: black;
+  transition-duration: 10ms;
 }
 #container {
   display: flex;
