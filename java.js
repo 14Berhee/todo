@@ -29,7 +29,7 @@ if (closeModalButton) {
 todoSubmitButton.onclick = () => {
   const taskText = todoInput.value.trim();
   const taskStatus = todoSelect.value;
-  if (!taskText || !taskStatus) return alert("Please fill in all fields.");
+  if (!taskText || !taskStatus) return alert("Бүгдийн бөгөл нүү");
   if (editingTaskIndex !== null) {
     tasks[editingTaskIndex].text = taskText;
     tasks[editingTaskIndex].status = taskStatus;
@@ -69,13 +69,14 @@ function createTaskElement(text, index) {
   const taskElement = document.createElement("div");
   taskElement.classList.add("todo-section2");
   taskElement.innerHTML = `
-<div class="Dugui"></div>
+<div class="Dugui">
 <div class="todo-comp">
 <p>${text}</p>
 </div>
 <div class="zurag">
 <img src="./Vector (1).png" alt="Edit" class="edit-btn" />
 <img src="./Frame.png" alt="Delete" class="delete-btn" />
+</div>
 </div>`;
   taskElement.querySelector(".edit-btn").onclick = () => {
     modal.style.display = "block";
